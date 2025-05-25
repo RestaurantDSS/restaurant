@@ -16,10 +16,21 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
+        /*User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin'),
-        ]);
+        ]);*/
+
+        $user = User::firstOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'admin',
+                'password' => Hash::make('admin'),
+            ]
+        );
+
+        // Llama al seeder que asigna el rol de super admin
+        $this->call(AssignSuperAdminSeeder::class);
     }
 }
