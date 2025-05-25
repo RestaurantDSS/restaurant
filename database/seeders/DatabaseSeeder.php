@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin'),
         ]);*/
 
-        $user = User::firstOrCreate(
+        $admin = User::firstOrCreate(
             ['email' => 'admin@admin.com'],
             [
                 'name' => 'admin',
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        // Llama al seeder que asigna el rol de super admin
-        $this->call(AssignSuperAdminSeeder::class);
+        // Ejecutar el seeder de roles y permisos
+        $this->call(RoleAndPermissionSeeder::class);
     }
 }
