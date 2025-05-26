@@ -16,10 +16,21 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
+        /*User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin'),
-        ]);
+        ]);*/
+
+        $admin = User::firstOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'admin',
+                'password' => Hash::make('admin'),
+            ]
+        );
+
+        // Ejecutar el seeder de roles y permisos
+        $this->call(RoleAndPermissionSeeder::class);
     }
 }
