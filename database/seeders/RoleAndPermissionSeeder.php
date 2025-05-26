@@ -12,15 +12,8 @@ class RoleAndPermissionSeeder extends Seeder
 {
     public function run(): void
     {
-        // Crear permisos de ejemplo o los de Shield si ya están definidos
+        // Crear permisos de ejemplo o losy de Shield si ya están definidos
         $permissions = [
-            'view_users',
-            'create_users',
-            'edit_users',
-            'delete_users',
-            'view_roles',
-            'manage_roles',
-            'access_filament',
             'view_categoria',
             'view_any_categoria',
             'create_categoria',
@@ -30,9 +23,9 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_categoria',
             'reorder_categoria',
             'delete_categoria',
+            'delete_any_categoria',
             'force_delete_categoria',
             'force_delete_any_categoria',
-            
             'view_cliente',
             'view_any_cliente',
             'create_cliente',
@@ -42,9 +35,9 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_cliente',
             'reorder_cliente',
             'delete_cliente',
+            'delete_any_cliente',
             'force_delete_cliente',
             'force_delete_any_cliente',
-            
             'view_inventario',
             'view_any_inventario',
             'create_inventario',
@@ -54,8 +47,9 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_inventario',
             'reorder_inventario',
             'delete_inventario',
+            'delete_any_inventario',
             'force_delete_inventario',
-
+            'force_delete_any_inventario',
             'view_pe::detalle',
             'view_any_pe::detalle',
             'create_pe::detalle',
@@ -65,9 +59,9 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_pe::detalle',
             'reorder_pe::detalle',
             'delete_pe::detalle',
+            'delete_any_pe::detalle',
             'force_delete_pe::detalle',
             'force_delete_any_pe::detalle',
-
             'view_pedido',
             'view_any_pedido',
             'create_pedido',
@@ -77,9 +71,9 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_pedido',
             'reorder_pedido',
             'delete_pedido',
+            'delete_any_pedido',
             'force_delete_pedido',
             'force_delete_any_pedido',
-
             'view_producto',
             'view_any_producto',
             'create_producto',
@@ -89,21 +83,15 @@ class RoleAndPermissionSeeder extends Seeder
             'replicate_producto',
             'reorder_producto',
             'delete_producto',
+            'delete_any_producto',
             'force_delete_producto',
             'force_delete_any_producto',
-
             'view_role',
             'view_any_role',
             'create_role',
             'update_role',
-            'restore_role',
-            'restore_any_role',
-            'replicate_role',
-            'reorder_role',
             'delete_role',
-            'force_delete_role',
-            'force_delete_any_role',
-
+            'delete_any_role',
             'view_user',
             'view_any_user',
             'create_user',
@@ -115,7 +103,7 @@ class RoleAndPermissionSeeder extends Seeder
             'delete_user',
             'delete_any_user',
             'force_delete_user',
-            'force_delete_any_user',
+            'force_delete_any_user'
         ];
 
         foreach ($permissions as $permission) {
